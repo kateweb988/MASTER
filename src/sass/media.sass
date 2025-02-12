@@ -1,0 +1,597 @@
+@media screen and (max-width: 1700px)
+   .header .swiper-button-next1
+      right: 13%
+@media screen and (max-width: 1500px)
+   .header .swiper-button-next1
+      right: 8%
+@media screen and (max-width: 1350px)
+   .header .swiper-button-next1
+      right: 5%
+@media screen and (max-width: 1280px)
+   .nav 
+      &__list 
+         li 
+            margin-right: 30px
+   .pop .swiper2 .swiper-slide
+      width: 264px !important
+   .pop .swiper2 .swiper-slide p
+      font-size: 22px
+   .pop .swiper2 .swiper-slide ul li a
+      font-size: 17px
+   .info__item p
+      font-size: 17px
+   .info__item h3
+      font-size: 21px
+   .rev .swiper3 .swiper-slide
+      width: 364px !important
+   .footer__text
+      left: 0
+   .footer__info
+      left: 0
+@media screen and (max-width: 1199px)
+   .catalog__left, .catalog__right
+      min-height: inherit
+   .catalog__right .catalog__name, .catalog__links
+      display: none
+   .catalog__box.area .catalog__item
+      width: 100%
+      margin-right: 0 !important
+   .catalog__box.area .catalog__left
+      height: 400px
+   .menu-btn 
+      width: 39px
+      height: 39px
+      position: absolute
+      background: $green 
+      border-radius: 50%
+      right: 20px
+      display: flex
+      align-items: center
+      justify-content: center
+      top: 28px
+      z-index: 11
+      overflow: hidden
+   .menu-btn span 
+      width: 21px
+      height: 2px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-color: white
+      transition: all 0.5s
+   .menu-btn span:nth-of-type(2) 
+      top: calc(50% - 5.5px)
+      width: 21px
+      height: 2px
+   .menu-btn span:nth-of-type(3) 
+      top: calc(50% + 6.4px)
+      width: 21px
+      height: 2px
+   .menu 
+      position: fixed
+      top: 0px
+      right: 0
+      width: 100%
+      height: 100vh
+      overflow-y: auto !important
+      padding: 140px 30px
+      background: white
+      transform: translateX(500%)
+      transition: transform 0.5s
+      z-index: 50
+      overflow: hidden
+      display: flex !important
+      flex-direction: column
+   .menu.active
+      transform: translateX(0)
+   .menu-btn.active 
+      overflow: visible
+      position: fixed
+   .menu-btn.active span:nth-of-type(1) 
+      display: none
+   .menu-btn.active span:nth-of-type(2) 
+      top: 50%
+      width: 24px
+      transform: translate(-50%, 0%) rotate(45deg)
+      margin-left: 0
+   .menu-btn.active span:nth-of-type(3) 
+      width: 24px
+      top: 50%
+      transform: translate(-50%, 0%) rotate(-44deg)
+      margin-left: 0
+   .menu-btn, .menu
+      display: block
+   .catalog__info
+      display: none
+   .catalog 
+      .tabs__pane_show
+         background: transparent
+   .catalog .onCF li ul
+      left: 0
+   .catalog__item
+      height: auto
+      margin-bottom: 30px
+      flex-direction: column
+   .catalog__left
+      width: 100%
+      height: 400px
+      margin-right: 0 !important
+      margin-left: 0 !important
+      max-width: 100%   
+      margin-bottom: 30px
+   .catalog__text
+      max-width: 100%
+   .catalog__item:nth-child(2n)
+      flex-direction: column
+      background: transparent
+      padding: 0
+   .catalog__item_horizontal .catalog__per
+      flex-direction: column
+      align-items: flex-start
+      margin-bottom: 0
+   .catalog__item_horizontal .catalog__projects
+      display: none
+   .catalog__item
+      margin-bottom: 50px
+   .catalog__right
+      height: auto
+   .catalog__left
+      height: 350px
+   .menu-btn3, .menu-btn4, .menu-btn5, .menu-btn6, .menu-btn7 
+      display: block
+      position: fixed
+      top: 50%
+      right: 5%
+      z-index: 10
+      width: 57px
+      height: 57px
+      background: url(/img/filter.svg) no-repeat center center / cover
+   .menu-btn3.active, .menu-btn4.active, .menu-btn5.active, .menu-btn6.active, .menu-btn7.active
+      background: url(/img/filter2.svg) no-repeat center center / cover
+      top: 12px
+      right: 40px
+      z-index: 5000
+   .menu3, .menu4, .menu5, .menu6, .menu7 
+      top: 0px
+      left: 0
+      padding: 60px 40px
+      width: 100%
+      z-index: 2000
+      background: white
+      height: 100%
+      overflow-y: auto !important
+      transform: translateX(500%)
+      position: fixed
+      max-width: 100%
+      &.active
+         display: block
+         transform: translateX(0%)
+   .catalog .panel__text, .catalog .panel__text2, .catalog .panel__text3, .catalog .panel__text4, .catalog .panel__text5, .catalog .panel__text6
+      max-width: 100%
+   .catalog .form_control_container
+      width: 50%
+   .catalog__view
+      display: none
+   .card__box
+      flex-direction: column 
+      align-items: center
+   .sliderr
+      order: 1
+      margin-right: 0
+      max-width: 100%
+      margin-bottom: 30px
+   .card__info
+      order: 3
+   .slider-nav
+      order: 2
+      width: 100%
+      max-width: 940px
+      margin: 0px -10px 50px
+   .slider-nav .slick-slide
+      margin: 0px 10px
+      max-width: inherit
+   .card__info
+      max-width: 100%
+   .nav__info, .nav__tel, .nav__basket p, .nav__catalog, .nav__enter p
+      display: none
+   .nav 
+      z-index: 51
+      .nav__list 
+         display: none
+   .nav__top
+      position: fixed
+      bottom: -1px
+      width: 100%
+      left: 0
+      padding: 20px
+      justify-content: center
+      background: white
+   .nav__enter
+      margin: 0 60px
+   .nav__bottom
+      margin-top: 0
+   .menu 
+      .nav__list 
+         display: block
+         li 
+            margin-bottom: 10px
+      .nav__tel 
+         display: block
+         margin-left: 0
+         margin-top: 20px
+      .nav__info 
+         display: flex
+         margin-top: 25px
+   .header .swiper-button-next1
+      right: 2%
+   .pop .swiper2 .swiper-wrapper, .rev .swiper3 .swiper-wrapper
+      flex-wrap: inherit
+   .pop .swiper2 .swiper-slide
+      width: 300px !important
+   .rev .swiper3 .swiper-slide
+      width: 455px !important
+   .pop .swiper2 .swiper-slide:nth-child(4n), .rev .swiper3 .swiper-slide:nth-child(4n)
+      margin-right: 20px !important
+   .pop
+      padding: 40px 0
+      .swiper-pagination-bullet
+         background-color: grey
+   .rev 
+      .swiper-pagination-bullet
+         background-color: grey
+      .pag 
+         bottom: -20px
+         position: relative
+   .hit__item
+      width: 32.7%
+      margin-right: 20px
+      &:nth-child(n+4)
+         display: none
+      &:nth-child(3)
+         margin-right: 0
+   .info__top
+      flex-direction: column
+   .info__left, .info__right 
+      max-width: 100%
+   .info__left ul
+      margin-top: 20px
+      margin-bottom: 20px
+   .info__row
+      margin-top: 40px
+      flex-wrap: wrap
+   .info__item 
+      width: 48.8%
+      margin-bottom: 26px
+   .rev__banner
+      margin-top: 60px
+   .footer 
+      padding-bottom: 110px
+      padding-top: 20px
+   .footer__row
+      flex-direction: column 
+      text-align: center
+   .footer .nav__list
+      top: 0
+      margin: 40px auto 25px
+   .footer__flex
+      flex-direction: column
+   .footer__socials
+      p 
+         display: none
+   .footer__bottom 
+      padding-top: 0
+      margin-top: 25px
+      border-top: none
+      text-align: center
+   .footer__text
+      top: 0
+      margin-top: 20px
+   .footer__btns
+      top: 0
+      margin-top: 25px
+   .nav__box
+      padding: 0
+      padding-top: 10px
+      border: none
+@media ( max-width: 991px )
+   input, textarea, select
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+   h1 
+      font-size: 38px
+   .header__content
+      margin-left: 0
+   .header
+      .header__arr
+         display: none
+   .header__content p
+      font-size: 17px
+      width: 100%
+      max-width: 340px
+   .pop .swiper2 .swiper-slide, .rev .swiper3 .swiper-slide
+      width: 340px !important
+   .info__item
+      margin-bottom: 18px
+   .brands .swiper-pagination4
+      display: flex
+      position: relative
+      bottom: -20px
+      .swiper-pagination-bullet
+         background-color: grey
+   .brands .header__arr
+      display: none
+   .brands
+      padding-bottom: 67px
+   .brands .swiper4
+      width: 100%
+   .footer__tel a
+      margin-bottom: 5px
+   .menu2
+      width: 80%
+      left: 50%
+      margin-left: -40%
+   .menu-btn2.active
+      right: 13%
+@media screen and (max-width: 767px)
+   .header__wrap
+      overflow: hidden
+   .pop .swiper2, .rev .swiper3
+      overflow: visible
+      .swiper-slide, .rev .swiper3 .swiper-slide
+         width: 100% !important
+   .hit__tow
+      flex-direction: column
+   .hit__item
+      margin-right: 0
+      margin-bottom: 25px
+      padding: 20px
+      width: 100%
+      height: auto
+   .info__item
+      width: 100%
+   .info, .hit
+      padding: 40px 0
+   .hit__text, .hit__item img
+      margin-bottom: 20px
+   .rev__banner
+      display: none
+   .brands
+      padding-top: 40px
+   .art .swiper5 .swiper-slide p
+      font-size: 16px
+      padding-right: 0
+   .art__wrap
+      position: relative
+      padding-bottom: 60px
+   .art__nav
+      position: absolute
+      bottom: -20px
+      left: 50%
+      margin-left: -67px
+   .footer .nav__list
+      flex-direction: column 
+      li 
+         margin-right: 0
+         margin-bottom: 15px
+         &:last-child
+            margin-bottom: 0
+         &:first-child
+            position: relative
+            left: -4px
+   .info__left ul li
+      align-items: flex-start
+   .info__left ul li:before
+      position: relative
+      top: 9px
+@media screen and (max-width: 576px)
+   button:active, button:focus 
+      outline: none
+   button::-moz-focus-inner 
+      border: 0
+   a:active, a:focus
+      outline: none
+   input, textarea
+      outline: none
+   input:active, textarea:active
+      outline: none
+   input:focusout
+      outline: none
+   .mm 
+      flex-direction: column 
+      align-items: center
+      justify-content: center
+      li 
+         margin-bottom: 40px !important
+         width: 100% !important
+         margin-top: 0 !important
+   .menu-btn
+      top: 21px
+   .catalog .tabs__nav
+      margin-bottom: 0
+   .catalog__left
+      height: 275px !important
+      margin-bottom: 25px !important
+   .catalog__title
+      font-size: 20px !important
+   .catalog__sum
+      font-size: 14px !important
+      margin-bottom: 17px
+      span 
+         font-size: 14px !important
+   .catalog__text p
+      font-size: 14px !important
+      &:nth-child(n+2)
+         display: none
+   .catalog__item
+      padding: 0
+      background: transparent !important
+   .catalog .tabs__nav
+      &:after 
+         content: ""
+         display: inline-flex
+         flex: 1 0 auto 
+         margin: 10px
+         height: 10px
+   .catalog .selectCF .titleCF
+      font-size: 14px
+   .catalog .selectCF li ul li
+      font-size: 14px
+      height: auto
+      margin-bottom: 0
+   .catalog .onCF li ul
+      top: 43px
+   .catalog__next
+      font-size: 14px
+   .catalog__nav ul li a
+      font-size: 14px
+   .catalog__nav ul li
+      width: 31px
+      height: 31px
+      margin-right: 8px
+   .catalog__name
+      font-size: 16px
+   .catalog__el_type .custom-checkbox + label, .catalog .accordeon .custom-checkbox + label, .catalog .accordeon2 .custom-checkbox + label, .catalog .accordeon3 .custom-checkbox + label, .catalog .accordeon4 .custom-checkbox + label, .catalog .accordeon5 .custom-checkbox + label, .catalog .accordeon6 .custom-checkbox + label
+      font-size: 14px
+   .catalog .accordeon__button, .catalog .accordeon__button2, .catalog .accordeon__button3, .catalog .accordeon__button4, .catalog .accordeon__button5, .catalog .accordeon__button6
+      font-size: 16px
+   .menu3, .menu4, .menu5, .menu6, .menu7
+      padding: 70px 20px
+   .menu-btn3.active, .menu-btn4.active, .menu-btn5.active, .menu-btn6.active, .menu-btn7.active
+      right: 20px
+   .catalog__el
+      margin-bottom: 40px
+   .catalog__box.area .catalog__left
+      height: 340px
+   .sliderr
+      height: 280px
+      margin-bottom: 5px
+   .slick-dots
+      display: none !important
+   .slider-nav
+      margin: 0px -5px 40px
+      .slick-slide
+         height: 86px
+         padding: 10px
+         margin: 0 5px
+   .card__top
+      display: none
+   .card__sum
+      font-size: 27px
+      margin-right: 12px
+   .card__proc
+      font-size: 27px
+   .card__sale
+      font-size: 14px
+   .card__see
+      font-size: 14px
+      margin-bottom: 27px
+   .card .custom-checkbox + label
+      margin-right: 17px
+   .card__btn
+      width: 100%
+      height: 50px
+      font-size: 14px
+   .card__one
+      margin-bottom: 12px
+      img 
+         height: 40px
+      p 
+         font-size: 14px
+         margin-left: 17px
+   .card__firm
+      margin-top: 20px
+      font-size: 14px
+   .nav__logo
+      width: 190px
+      margin-right: 0
+   .menu 
+      padding-top: 120px
+      padding-left: 23px
+   .menu .nav__tel
+      a 
+         display: block
+   .menu .nav__info
+      display: block
+      margin-right: 0
+   .nav__info p
+      margin-right: 0   
+   h1 
+      font-size: 30px
+   .header__content h1
+      margin-bottom: 25px
+   .header__content p
+      font-size: 16px
+      margin-bottom: 25px
+      max-width: 325px
+   .nav__info p
+      font-size: 16px
+   .header__content a
+      width: 100%
+   h2 
+      font-size: 24px
+   .header__wrap .swiper1 .swiper-slide img
+      object-position: -523px 0px
+   .hit 
+      .container
+         position: relative
+         padding-bottom: 60px !important
+   .hit__top a
+      position: absolute
+      bottom: 14px
+      left: 50%
+      white-space: nowrap
+      margin-left: -86px
+   .info__text
+      font-size: 16px
+   .info__left ul li
+      font-size: 16px
+      margin-bottom: 5px
+   .info__block p
+      font-size: 22px
+   .info__block span
+      font-size: 19px
+   .rev__top
+      flex-direction: column
+   .rev__top img
+      margin-right: 0
+      width: 100%
+      height: auto
+      margin-bottom: 10px
+   .art__wrap
+      padding-bottom: 130px
+   .art__top a
+      position: absolute
+      bottom: 0
+      left: 50%
+      margin-left: -58px
+   .art__nav
+      bottom: 65px
+   .footer__logo
+      width: 200px
+   .footer 
+      padding-top: 30px
+   .footer__btns
+      width: 100%
+      margin-top: 30px
+      flex-direction: column 
+      a 
+         width: 100%
+         &:first-child
+            margin-right: 0
+            margin-bottom: 15px
+   .hit__text
+      br 
+         display: none
+   .menu2
+      padding: 40px 20px 25px
+      width: 73%
+      left: 50%
+      margin-left: -37%
+   .menu-btn2.active
+      right: 20%
+   .nav__top
+      z-index: 50
+   .mobile__form input
+      padding-right: 50px
