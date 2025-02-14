@@ -29,15 +29,6 @@
    .footer__info
       left: 0
 @media screen and (max-width: 1199px)
-   .catalog__left, .catalog__right
-      min-height: inherit
-   .catalog__right .catalog__name, .catalog__links
-      display: none
-   .catalog__box.area .catalog__item
-      width: 100%
-      margin-right: 0 !important
-   .catalog__box.area .catalog__left
-      height: 400px
    .menu-btn 
       width: 39px
       height: 39px
@@ -104,41 +95,7 @@
       display: block
    .catalog__info
       display: none
-   .catalog 
-      .tabs__pane_show
-         background: transparent
-   .catalog .onCF li ul
-      left: 0
-   .catalog__item
-      height: auto
-      margin-bottom: 30px
-      flex-direction: column
-   .catalog__left
-      width: 100%
-      height: 400px
-      margin-right: 0 !important
-      margin-left: 0 !important
-      max-width: 100%   
-      margin-bottom: 30px
-   .catalog__text
-      max-width: 100%
-   .catalog__item:nth-child(2n)
-      flex-direction: column
-      background: transparent
-      padding: 0
-   .catalog__item_horizontal .catalog__per
-      flex-direction: column
-      align-items: flex-start
-      margin-bottom: 0
-   .catalog__item_horizontal .catalog__projects
-      display: none
-   .catalog__item
-      margin-bottom: 50px
-   .catalog__right
-      height: auto
-   .catalog__left
-      height: 350px
-   .menu-btn3, .menu-btn4, .menu-btn5, .menu-btn6, .menu-btn7 
+   .menu-btn3
       display: block
       position: fixed
       top: 50%
@@ -147,12 +104,12 @@
       width: 57px
       height: 57px
       background: url(/img/filter.svg) no-repeat center center / cover
-   .menu-btn3.active, .menu-btn4.active, .menu-btn5.active, .menu-btn6.active, .menu-btn7.active
+   .menu-btn3.active
       background: url(/img/filter2.svg) no-repeat center center / cover
       top: 12px
       right: 40px
       z-index: 5000
-   .menu3, .menu4, .menu5, .menu6, .menu7 
+   .menu3
       top: 0px
       left: 0
       padding: 60px 40px
@@ -167,32 +124,10 @@
       &.active
          display: block
          transform: translateX(0%)
-   .catalog .panel__text, .catalog .panel__text2, .catalog .panel__text3, .catalog .panel__text4, .catalog .panel__text5, .catalog .panel__text6
-      max-width: 100%
    .catalog .form_control_container
       width: 50%
-   .catalog__view
-      display: none
-   .card__box
-      flex-direction: column 
-      align-items: center
-   .sliderr
-      order: 1
-      margin-right: 0
-      max-width: 100%
-      margin-bottom: 30px
-   .card__info
-      order: 3
-   .slider-nav
-      order: 2
-      width: 100%
-      max-width: 940px
-      margin: 0px -10px 50px
-   .slider-nav .slick-slide
-      margin: 0px 10px
-      max-width: inherit
-   .card__info
-      max-width: 100%
+   .catalog__left
+      position: absolute
    .nav__info, .nav__tel, .nav__basket p, .nav__catalog, .nav__enter p
       display: none
    .nav 
@@ -243,13 +178,17 @@
       .pag 
          bottom: -20px
          position: relative
-   .hit__item
-      width: 32.7%
-      margin-right: 20px
-      &:nth-child(n+4)
-         display: none
-      &:nth-child(3)
-         margin-right: 0
+   .hit
+      .hit__item
+         width: 32.7%
+         margin-right: 20px
+         &:nth-child(n+4)
+            display: none
+         &:nth-child(3)
+            margin-right: 0
+   .catalog 
+      .hit__item:nth-child(n+4)
+         display: flex
    .info__top
       flex-direction: column
    .info__left, .info__right 
@@ -334,6 +273,100 @@
       margin-left: -40%
    .menu-btn2.active
       right: 13%
+   .catalog__size
+      flex-wrap: wrap
+   .calc__block input
+      width: 100%
+   .catalog__size .calc__item .custom-checkbox + label
+      margin-bottom: 10px
+   .cat__flex
+      flex-wrap: wrap
+   .catalog__size p
+      margin-right: 0
+      text-align: center
+      margin-bottom: 15px
+      width: 100%
+   .catalog__all
+      width: 100%
+      margin: 0 auto
+      display: block
+      text-align: center
+   .catalog__box .hit__item
+      width: 31.9%
+      &:nth-child(4n)
+         margin-right: 15px
+      &:nth-child(3n)
+         margin-right: 0
+   .calc__row div
+      width: 30%
+   .calc__row p
+      font-size: 16.5px
+   .calc__left
+      margin-right: 20px
+   .calc__info
+      padding: 20px
+   .calc__content p
+      font-size: 16px
+   .calc__sum
+      font-size: 21px
+   .calc__content
+      flex-direction: column
+   .calc__sub
+      br 
+         display: none
+   .calc__per
+      width: 50%
+   .calc__block_2 button
+      width: 32%
+   .calc-box img
+      display: none
+   .calc-box__content
+      padding-left: 0
+   .calc-box__content form input
+      width: 100%
+   .calc__wrap
+      padding: 20px
+   .card__top
+      flex-direction: column
+   .card__item
+      width: 100%
+      margin-bottom: 20px
+   .card__content
+      width: 100%
+   .card .tabs2 .tabs__nav
+      flex-direction: column
+      justify-content: center
+      text-align: center
+   .card .tabs2 .tabs__btn
+      margin-right: 0
+      margin-bottom: 15px
+   .card__info .tabs__nav
+      flex-direction: column
+      text-align: center
+      align-items: center
+   .card__info .tabs__btn
+      margin-right: 0
+      margin-bottom: 20px
+   .calc h2
+      font-size: 26px
+   .card__el
+      width: 100%
+   .card__item
+      height: 350px
+   .card__info .tabs__btn_active:after
+      bottom: -10px
+   .card__btn
+      margin: 0 auto 10px 
+   .card__buy 
+      margin: 0 auto 20px
+   .card__content
+      height: auto
+   .card__color:nth-child(7n)
+      margin-right: 10px
+   .card__color:nth-child(5n)
+      margin-right: 0
+   .card .tabs2
+      display: none
 @media screen and (max-width: 767px)
    .header__wrap
       overflow: hidden
@@ -385,6 +418,45 @@
    .info__left ul li:before
       position: relative
       top: 9px
+   .catalog__box .hit__item
+      width: 48.3%
+      &:nth-child(4n)
+         margin-right: 15px
+      &:nth-child(3n)
+         margin-right: 15px
+      &:nth-child(2n)
+         margin-right: 0px
+      &:nth-child(n+7)
+         display: none
+   .calc h2
+      margin-bottom: 20px
+   .calc__row div
+      width: 100%
+      margin-right: 0
+   .calc__form button
+      width: 100%
+   .calc__flex
+      flex-direction: column
+      align-items: flex-start
+   .calc__per
+      margin-right: 0
+      width: 100%
+      margin-bottom: 10px
+   .calc__block_2 .calc__per
+      width: 100%
+   .calc__block button
+      width: 100%
+   .calc-box__content p
+      font-size: 18px
+      line-height: 130% 
+   .card__color:nth-child(5n)
+      margin-right: 10px
+   .card__color:nth-child(4n)
+      margin-right: 0px
+   .card__color
+      width: 117px
+   .card__color p
+      font-size: 12px
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -408,32 +480,6 @@
          margin-top: 0 !important
    .menu-btn
       top: 21px
-   .catalog .tabs__nav
-      margin-bottom: 0
-   .catalog__left
-      height: 275px !important
-      margin-bottom: 25px !important
-   .catalog__title
-      font-size: 20px !important
-   .catalog__sum
-      font-size: 14px !important
-      margin-bottom: 17px
-      span 
-         font-size: 14px !important
-   .catalog__text p
-      font-size: 14px !important
-      &:nth-child(n+2)
-         display: none
-   .catalog__item
-      padding: 0
-      background: transparent !important
-   .catalog .tabs__nav
-      &:after 
-         content: ""
-         display: inline-flex
-         flex: 1 0 auto 
-         margin: 10px
-         height: 10px
    .catalog .selectCF .titleCF
       font-size: 14px
    .catalog .selectCF li ul li
@@ -442,67 +488,12 @@
       margin-bottom: 0
    .catalog .onCF li ul
       top: 43px
-   .catalog__next
-      font-size: 14px
-   .catalog__nav ul li a
-      font-size: 14px
-   .catalog__nav ul li
-      width: 31px
-      height: 31px
-      margin-right: 8px
-   .catalog__name
-      font-size: 16px
-   .catalog__el_type .custom-checkbox + label, .catalog .accordeon .custom-checkbox + label, .catalog .accordeon2 .custom-checkbox + label, .catalog .accordeon3 .custom-checkbox + label, .catalog .accordeon4 .custom-checkbox + label, .catalog .accordeon5 .custom-checkbox + label, .catalog .accordeon6 .custom-checkbox + label
-      font-size: 14px
-   .catalog .accordeon__button, .catalog .accordeon__button2, .catalog .accordeon__button3, .catalog .accordeon__button4, .catalog .accordeon__button5, .catalog .accordeon__button6
-      font-size: 16px
-   .menu3, .menu4, .menu5, .menu6, .menu7
+   .menu3
       padding: 70px 20px
-   .menu-btn3.active, .menu-btn4.active, .menu-btn5.active, .menu-btn6.active, .menu-btn7.active
+   .menu-btn3.active
       right: 20px
    .catalog__el
       margin-bottom: 40px
-   .catalog__box.area .catalog__left
-      height: 340px
-   .sliderr
-      height: 280px
-      margin-bottom: 5px
-   .slick-dots
-      display: none !important
-   .slider-nav
-      margin: 0px -5px 40px
-      .slick-slide
-         height: 86px
-         padding: 10px
-         margin: 0 5px
-   .card__top
-      display: none
-   .card__sum
-      font-size: 27px
-      margin-right: 12px
-   .card__proc
-      font-size: 27px
-   .card__sale
-      font-size: 14px
-   .card__see
-      font-size: 14px
-      margin-bottom: 27px
-   .card .custom-checkbox + label
-      margin-right: 17px
-   .card__btn
-      width: 100%
-      height: 50px
-      font-size: 14px
-   .card__one
-      margin-bottom: 12px
-      img 
-         height: 40px
-      p 
-         font-size: 14px
-         margin-left: 17px
-   .card__firm
-      margin-top: 20px
-      font-size: 14px
    .nav__logo
       width: 190px
       margin-right: 0
@@ -595,3 +586,66 @@
       z-index: 50
    .mobile__form input
       padding-right: 50px
+   .catalog h1
+      font-size: 21px
+   .catalog__goods
+      flex-direction: column
+   .catalog__goods .calc__item .custom-checkbox + label
+      width: 100%
+   .catalog__goods .calc__item
+      margin-right: 0
+      margin-bottom: 20px
+   .catalog__nav ul li
+      width: 25px
+      height: 25px
+   .catalog__area ul li a
+      font-size: 14px
+   .catalog__prev, .catalog__next 
+      font-size: 14px
+   .catalog__nav ul
+      margin: 0 10px
+   .catalog__goods .calc__item p
+      margin-top: 10px
+   .catalog__box .hit__item
+      width: 100%
+      margin-right: 0 !important
+   .calc__info
+      flex-direction: column
+   .calc__content p
+      font-size: 14px
+      margin-bottom: 5px
+   .calc__sub
+      font-size: 12px
+   .calc h3
+      font-size: 20px
+   .calc__block label
+      font-size: 14px
+      margin-bottom: 10px
+   .calc-box__content form button
+      width: 100%
+   .calc-box__content p
+      font-size: 17px
+   .cat__flex
+      justify-content: center
+   .catalog__size .calc__item
+      margin: 2.5px 5px !important
+   .bread__row a
+      font-size: 12px
+      line-height: 130%
+      margin-bottom: 5px
+   .bread__row a:after
+      margin: 0 10px
+   .card__list li
+      font-size: 16px
+   .card__btn, .card__buy
+      width: 100%
+   .card__sum p span
+      font-size: 28px
+   .card__total span
+      font-size: 20px
+      display: block
+   .card__colors
+      justify-content: space-between
+      div 
+         width: 48%
+         margin-right: 0 !important

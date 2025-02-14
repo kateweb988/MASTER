@@ -128,33 +128,32 @@ input:-moz-placeholder, textarea:-moz-placeholder
 .swiper-button-next, .swiper-button-prev
    z-index: 9
 .bread 
-   padding: 32px 0 
-   margin-bottom: 72px
-   border-bottom: 1px solid rgb(213, 213, 213)
+   padding: 28px 0 21px
    &__row
       flex-wrap: wrap
       display: flex
       align-items: center
       justify-content: flex-start
       a 
-         font-size: 16px
-         font-weight: 500
-         line-height: 16px
-         text-transform: uppercase
-         color: rgb(182, 181, 181)
+         font-size: 14px
+         line-height: 1.93
+         color: #a1a9b7
          &:after 
-            content: "-"
+            content: "/"
             display: inline-block
-            margin: 0 5px
+            margin: 0 15px
             color: rgb(182, 181, 181) !important
          &:last-child
-            color: rgb(56, 56, 56)
+            color: $green
             &:after 
                display: none
          &:hover 
             color: $green
 .mob 
    display: none
+.page 
+   .header 
+      box-shadow: 0px 5px 5px 0 rgba(241, 239, 249, 0.73)
 /* SELECT */
 .selectCF
    margin: 0
@@ -319,72 +318,6 @@ ul.info li
    display: inline-block
    border-radius: 5px
    padding: 0 5px
-.accordeon, .accordeon2, .accordeon3, .accordeon4, .accordeon5,  .accordeon6
-   padding: 5px 0 30px
-   border-bottom: 1px solid #ececec
-   margin-bottom: 26px
-   width: 100%
-.accordeon__item 
-   width: 100%
-   list-style-type: none
-.accordeon__item:first-child .accordeon__button
-   margin-top: 0
-.accordeon__button, .accordeon__button2, .accordeon__button3, .accordeon__button4, .accordeon__button5, .accordeon__button6
-   width: 100%
-   text-align: left
-   border: none
-   cursor: pointer
-   position: relative
-   transition: all 0.5s ease
-   font-size: 17px
-   font-weight: 700
-   color: #282828
-   display: flex
-   justify-content: space-between
-.accordeon__button:hover, .accordeon__button2:hover, .accordeon__button3:hover, .accordeon__button4:hover, .accordeon__button5:hover, .accordeon__button6:hover 
-   color: $green
-.accordeon__button:after, .accordeon__button2:after, .accordeon__button3:after, .accordeon__button4:after, .accordeon__button5:after, .accordeon__button6:after
-   content: ""
-   position: absolute
-   right: 0px
-   background: url(/img/down-arrow.png) no-repeat !important
-   width: 7px
-   left: inherit
-   height: 5px
-   top: 8px
-   bottom: inherit
-   margin-bottom: -20px
-   transition: all 0.5s ease
-.accordeon__button.active:after, .accordeon__button2.active:after, .accordeon__button3.active:after, .accordeon__button4.active:after, .accordeon__button5.active:after, .accordeon__button6.active:after
-   content: ""
-   position: absolute
-   right: 0px
-   background: url(/img/down-arrow.png) no-repeat !important
-   width: 7px
-   left: inherit
-   height: 5px
-   bottom: 30%
-   margin-bottom: -20px
-   transition: all 0.5s ease
-   transform: rotate(180deg)
-   -webkit-transform: rotate(180deg)
-.accordeon__panel, .accordeon__panel2, .accordeon__panel3, .accordeon__panel4, .accordeon__panel5, .accordeon__panel6
-   max-height: 0
-   overflow: hidden
-   margin-left: 0
-   transition: all 0.5s ease
-.panel__text, .panel__text2, .panel__text3, .panel__text4, .panel__text5, .panel__text6
-   list-style-type: none
-   padding-top: 0px
-   max-width: 688px
-   margin-top: 30px
-.panel__info
-   font-weight: 300
-   font-size: 16px
-   line-height: 140%
-   margin-bottom: 20px
-   &:last-child
-      margin-bottom: 0
 .swiper-button-disabled
    opacity: 0 !important
    pointer-events: none
@@ -444,14 +377,14 @@ input[type="search"]::-webkit-search-results-decoration
          color: #a8a8a8
          font-size: 14px
          margin-right: 16px
-#fromSlider2, #fromSlider3, #fromSlider4, #fromSlider, #fromSlider12, #fromSlider22, #fromSlider32, #fromSlider42, #fromSlider13, #fromSlider23, #fromSlider33, #fromSlider43, #fromSlider14, #fromSlider24, #fromSlider34, #fromSlider44, #fromSlider15, #fromSlider25, #fromSlider35, #fromSlider45, #fromSlider16, #fromSlider26, #fromSlider36, #fromSlider46
+#fromSlider
    z-index: 30 !important
 input[type=range]::-webkit-slider-thumb
    -webkit-appearance: none
    pointer-events: all
    width: 22px
    height: 22px
-   background: url(/img/range.svg) no-repeat center 0px  !important
+   background: url(/img/range.png) no-repeat center 0px  !important
    background-color: $green
    cursor: pointer
    border-radius: 50%
@@ -460,7 +393,7 @@ input[type=range]::-webkit-slider-thumb
    z-index: 20 !important
    position: relative
 input[type=range]:nth-child(2)::-webkit-slider-thumb
-   background: url(/img/range.svg) no-repeat center 0px  !important
+   background: url(/img/range.png) no-repeat center 0px  !important
    background-color: $green
    position: relative
    top: 0px
@@ -475,7 +408,7 @@ input[type=range]::-moz-range-thumb
    z-index: 20 !important
    height: 22px
    border-radius: 50%
-   background: url(/img/range.svg) no-repeat center  0px !important
+   background: url(/img/range.png) no-repeat center  0px !important
    background-color: $green
    cursor: pointer
 input[type=number]::-webkit-inner-spin-button,
@@ -497,10 +430,11 @@ input[type="range"]
    border: none
    top: inherit
    z-index: 2 !important
-   bottom: -53px
+   bottom: -77px
+   left: 4px
    &:hover, &:focus 
       border: none !important
-#fromSlider, #fromSlider2, #fromSlider3, #fromSlider4, #fromSlider2, #fromSlider3, #fromSlider4, #fromSlider, #fromSlider12, #fromSlider22, #fromSlider32, #fromSlider42, #fromSlider13, #fromSlider23, #fromSlider33, #fromSlider43, #fromSlider14, #fromSlider24, #fromSlider34, #fromSlider44, #fromSlider15, #fromSlider25, #fromSlider35, #fromSlider45, #fromSlider16, #fromSlider26, #fromSlider36, #fromSlider46
+#fromSlider
    height: 0
    z-index: 1
 #event-change
@@ -510,18 +444,24 @@ input[type="range"]
    z-index: -1
    opacity: 0
 .catalog 
-   &__information 
-      width: 100%
+   padding-bottom: 46px
+   h1 
+      font-size: 30px
+      font-weight: 600
+      color: #2e2e2e
+      margin-bottom: 18px
+      text-transform: none
+      margin-bottom: 20px
+      font-family: 'Open Sans'
    .selectCF
-      border: 2px solid $green
-      height: 49px
-      padding: 9px 45px 0 20px
+      border: none
+      height: auto
+      padding: 0
       box-sizing: border-box
    .selectCF .titleCF
-      color: rgb(16, 25, 32) !important
-      font-size: 20px
-      font-weight: 400
-      line-height: 130%
+      color: #6a994e !important
+      font-size: 15px
+      margin-left: 10px
    .selectCF .searchCF input
       display: none !important
    .selectCF .arrowCF
@@ -534,149 +474,32 @@ input[type="range"]
    .onCF li ul
       background: white
       border: 2px solid #e0e5eb
-      left: -27px
-      top: 50px
+      left: -10px
+      top: 36px
       width: max-content
       border-radius: 10px
       padding: 10px 20px
    .onCF .arrowCF
       top: 6px
    .selectCF li ul li
-      margin-bottom: 10px
+      margin-bottom: 5px
       color: rgb(16, 25, 32) !important
-      font-size: 20px
-      font-weight: 400
+      font-size: 15px
       line-height: 130%
       padding-left: 0
-      &:first-child
-         display: none !important
       &:last-child
          margin-bottom: 0
       &:hover 
          color: $green !important
-   &__item 
-      position: relative
-      margin-bottom: 70px
-      width: 100%
-      height: auto
-      align-items: flex-start
-      padding: 20px
-      &:nth-child(2n)
-         background: rgb(248, 248, 248)
-      &_horizontal
-         flex-direction: column
-         height: auto
-         padding: 0
-         .catalog__links a
-            width: 100px
-            height: 130px
-         .catalog__text
-            max-width: 612px
-         .catalog__right
-            display: flex
-            min-height: auto
-            flex-direction: initial
-         .catalog__projects 
-            margin-left: 30px
-            margin-top: 85px
-            margin-bottom: 0px
-            width: 100%
-            max-width: 609px
-            a 
-               margin-bottom: 10px
-               &:nth-child(5n)
-                  margin-right: 0
-         .catalog__left
-            width: 100%
-            margin-right: 0
-            max-width: 100%
-            margin-bottom: 35px
-            height: 477px
-         .catalog__per 
-            margin-bottom: 40px
-            flex-wrap: wrap
-            display: flex 
-            align-items: center
-         .catalog__sum
-            margin-bottom: 0
-         .catalog__title
-            margin-right: 20px
-   .main__button
-      top: 50%
-      margin-top: -54px
-      pointer-events: none
-   &__projects
-      margin-top: auto
-      margin-bottom: -10px
-   &__links 
-      flex-wrap: wrap
-      a 
-         width: 108px
-         height: 139px
-         display: block
-         position: relative
-         margin-right: 21px
-         margin-bottom: 10px
-         &:last-child
-            margin-right: 0
-         img 
-            width: 100%
-            height: 100%
-            object-fit: cover
-   &__left 
-      position: relative
-      min-height: 555px
-      display: block
-      width: 100%
-      max-width: 512px
-      margin-right: 20px
-      & > img
-         width: 100%
-         height: 100%
-         position: absolute
-         top: 0
-         left: 0
-         object-fit: cover
-      &:hover 
-         .main__button, .main__area 
-            opacity: 1
-   &__right
-      display: flex
-      flex-direction: column 
-      min-height: 555px
-      align-items: flex-start
-      .catalog__name
-         margin-top: auto
-   &__text 
-      width: 100%
-      max-width: 631px 
-      p 
-         color: rgb(16, 25, 32)
-         font-size: 19px
-         font-weight: 400
-         line-height: 130%
-         margin-bottom: 20px
-   .tabs__nav
-      margin-bottom: 34px
-      overflow-x: auto
-   &__name 
-      margin-bottom: 15px
-      color: rgb(22, 23, 23)
-      font-size: 20px
-      font-family: 'Proxima Nova Rg'
-      font-weight: 700
-      line-height: 140%
-      text-transform: uppercase
-   h1 
-      margin-bottom: 40px
    .form_control
       margin-top: 0  
+      justify-content: flex-start
    .form_control input[type="number"] 
       width: auto
       height: 22px
-      color: #161717
-      font-size: 17px
-      font-weight: 500 
+      color: #1c2126
+      font-size: 16.5px
+      font-weight: 600 
       line-height: 130%
       border: none
       background: transparent
@@ -684,358 +507,399 @@ input[type="range"]
       top: 50%
       z-index: 5
       right: inherit
-      margin-top: -11px
-      left: 50px
+      margin-top: -13px
+      left: 40px
       &:focus 
          border: none
    .form_control_container__time
-      color: rgb(96, 99, 103)
-      font-size: 17px
-      font-weight: 400
+      font-size: 16.5px
+      font-weight: 600
+      color: #d0caca
    .form_control_container
-      width: 184px
-      height: 53px
-      background: white
       z-index: -1
-      border-radius: 0px
-      padding-left: 20px
-      box-sizing: border-box
-      border: 2px solid rgb(224, 229, 235)
+      width: 123px
+      height: 45px
+      padding: 14px 74px 17px 13px
+      border-radius: 1px
+      border: solid 1px #e9e9e9
+      background-color: #fff
       &:first-child
-         border-right: none
-   &__toggle 
-      align-items: center
-      width: 100%
-      justify-content: space-between
-      margin-bottom: 20px
-      .catalog__name
-         margin-bottom: 0
-      &:last-child
-         margin-bottom: 0
+         margin-right: 6px
+   &__filter 
+      width: 168px
+      height: 45px
+      border-radius: 1px
+      background-color: #bc4749
+      margin: 0 auto
+      border: 1px solid #bc4749
+      &:hover 
+         background-color: $green
+         border: 1px solid $green
+         color: white
    &__el 
-      margin-bottom: 50px
+      margin-bottom: 40px
       &_type 
          .custom-checkbox + label
-            color: rgb(96, 99, 103)
-            font-size: 17px
+            color: #2e2e2e
+            font-size: 18px
             line-height: 130%
             &:hover 
                color: $green
          .custom-checkbox + label::before
-            width: 25px
-            max-width: 25px
+            max-width: 20px
             transition: 0s
-            height: 25px
             box-sizing: border-box
-            border: 2px solid rgb(224, 229, 235)
-            border-radius: 50%
-            margin-right: 15px
+            margin-right: 12px
+            width: 20px
+            height: 20px
+            margin-right: 16px
+            border-radius: 3.6px
+            border: 1px solid #e1e1e1
+            background-color: #fff
          .custom-checkbox:checked + label::before 
-            background: url(/img/check2.svg) no-repeat 50% 50%
+            background: url(/img/check.png) no-repeat 50% 50%
             background-color: $green
-            border: 2px solid $green
+            border: 1px solid $green
             background-size: 15px
          .custom-checkbox:checked + label
             color: rgb(22, 23, 23)
             font-weight: 500
          .calc__item
-            margin-bottom: 17px
+            margin-bottom: 16px
             &:last-child
                margin-bottom: 0
-   .tabs__btn
-      border: 1px solid rgb(224, 229, 235)
-      display: flex
-      align-items: center
-      justify-content: center
-      width: max-content
-      height: 49px
-      padding: 0 20px 
-      color: rgb(165, 167, 173)
-      margin-right: 10px
-      color: rgb(96, 99, 103)
-      font-size: 17px
-      font-weight: 500
-      line-height: 130%
-      white-space: nowrap
-      &:last-child
-         margin-right: 0
-      &_active 
-         background: $green
-         border: 1px solid $green
-         color: white !important
-   &__see, &__see2, &__see3, &__see4
-      display: none
-   .local__row
-      margin-bottom: 0 !important
-      & > div
-         margin-right: 10px
+      &_color 
+         .custom-checkbox + label
+            color: #2e2e2e
+            font-size: 16.7px
+            line-height: 130%
+            &:hover 
+               color: $green
+         .custom-checkbox + label::before
+            width: 30px
+            max-width: 30px
+            transition: 0s
+            height: 30px
+            box-sizing: border-box
+            border: 1px solid #dedede
+            border-radius: 50%
+            margin-right: 10px
+         .custom-checkbox:checked + label::before 
+            border: 1px solid $green
+         .custom-checkbox:checked + label
+            color: $green
+         .calc__item
+            margin-bottom: 8px
+            position: relative
+            &:last-child
+               margin-bottom: 0
+            .custom-checkbox + label::after
+               content: ""
+               display: flex
+               align-items: center
+               justify-content: center
+               border-radius: 50%
+               width: 22px
+               height: 22px
+               position: absolute
+               left: 4px
+               top: 4px
+            &:nth-child(1)
+               .custom-checkbox + label::after
+                  background-color: #ded09f
+            &:nth-child(2)
+               .custom-checkbox + label::after 
+                  background-color: #ebdebc
+            &:nth-child(3)
+               .custom-checkbox + label::after 
+                  background-color: #5d2028
+            &:nth-child(4)
+               .custom-checkbox + label::after 
+                  background-color: #7e292c
+            &:nth-child(5)
+               .custom-checkbox + label::after 
+                  background-color: #154889
+            &:nth-child(6)
+               .custom-checkbox + label::after 
+                  background-color: #276234
+            &:nth-child(7)
+               .custom-checkbox + label::after 
+                  background-color: #0f4336
+            &:nth-child(8)
+               .custom-checkbox + label::after 
+                  background-color: #9fa0a2
+            &:nth-child(9)
+               .custom-checkbox + label::after 
+                  background-color: #474a51
+            &:nth-child(10)
+               .custom-checkbox + label::after 
+                  background-color: #44332c
+            &:nth-child(11)
+               .custom-checkbox + label::after 
+                  background-color: #dddfd4
+            &:nth-child(12)
+               .custom-checkbox + label::after 
+                  background-color: #f3f8f4
+            &:nth-child(13)
+               .custom-checkbox + label::after 
+                  background-color: #a6a8a7
+            &:nth-child(14)
+               .custom-checkbox + label::after 
+                  background-color: #f7f9ee       
    &__top 
       align-items: center
-      justify-content: space-between
-      margin-bottom: 27px
+      display: flex
+      height: 48px
+      padding-left: 14px
+      border: 1px solid #efefef
+      background-color: #fff
+      border-radius: 4px
+      margin-bottom: 22px
+      p 
+         font-size: 15px
+         font-weight: 600
+         color: #a1a9b7
    &__info 
-      flex: 1 0 auto 
-      width: 100%
-      max-width: 365px
-      margin-right: 70px
+      border: solid 1px #e9e9e9
+      padding: 32px 33px 46px 22px
+      &:first-child
+         margin-bottom: 18px
    &__items 
       width: 100%
-      max-width: 100%
-   &__view 
-      p 
-         margin-right: 5px
-         color: rgb(16, 25, 32)
-         font-size: 20px
-         font-weight: 400
-      div 
-         margin-left: 10px
-         cursor: pointer
-         &.active 
-            rect
-               stroke: $green
-   &__title 
-      color: rgb(16, 25, 32)
-      font-size: 30px
-      font-weight: 600
-      line-height: 130%
-      text-transform: uppercase
-      margin-bottom: 4px
-   &__sum
-      color: $green
-      font-size: 25px
-      font-weight: 600
-      line-height: 130%
-      text-transform: uppercase
-      margin-bottom: 24px
-      span 
-         color: rgba(16, 25, 32, 0.2)
-         font-size: 21px
-         font-weight: 600
-         line-height: 130%
-         text-decoration: line-through
-         text-transform: uppercase
-         margin-left: 10px
-   &__next 
+      max-width: 913px
+   &__nav 
       align-items: center
-      color: rgb(0, 26, 52)
-      font-size: 20px
-      font-family: 'Proxima Nova Lt'
-      font-weight: 400
-      text-transform: uppercase
-      .svg
-         margin-left: 7px
+      width: 100%
+      justify-content: center
+      ul 
+         align-items: center
+         display: flex 
+         margin: 0 20px
+         li 
+            display: flex 
+            box-sizing: border-box
+            width: 34px
+            height: 34px
+            border-radius: 1px
+            align-items: center
+            justify-content: center
+            margin-right: 10px
+            background: white
+            a 
+               display: flex 
+               align-items: center
+               color: #1c2126 !important
+               font-size: 16px
+               justify-content: center
+               opacity: 1
+               width: 100%
+               height: 100%
+               font-weight: 400 !important
+               &:hover 
+                  color: $green
+            &.active 
+               background-color: #6a994e
+               a 
+                  color: white !important
+   &__prev 
+      align-items: center
+      font-size: 16px
+      line-height: 1.69
+      color: #a1a9b7
+      .svg 
+         width: 20px
+         height: 20px
+         margin-right: 3px
+         path 
+            stroke: #a1a9b7
       &:hover 
          color: $green
          .svg 
             path 
-               fill: $green
-   &__nav 
+               stroke: $green
+   &__next 
       align-items: center
-      ul 
-         align-items: center
-         display: flex 
-         li 
-            display: flex 
-            box-sizing: border-box
-            width: 39.48px
-            height: 39.48px
-            align-items: center
-            justify-content: center
-            margin-right: 10px
-            a 
-               display: flex 
-               align-items: center
-               color: rgb(0, 26, 52)
-               font-family: 'Proxima Nova Rg'
-               font-size: 20px
-               justify-content: center
-               width: 100%
-               height: 100%
-               &:hover 
-                  color: $green
-            &.active 
-               border: 2px solid rgb(254, 114, 0)
-               a 
-                  color: $green
-   .accordeon__button, .accordeon__button2, .accordeon__button3, .accordeon__button4, .accordeon__button5, .accordeon__button6
-      color: rgb(22, 23, 23)
-      font-family: 'Proxima Nova Rg'
-      font-size: 20px
-      font-weight: 700
-      line-height: 140%
-      transition: 0s !important
-      text-align: left
-      text-transform: uppercase
-      margin-bottom: 20px  
-   .accordeon, .accordeon2, .accordeon3, .accordeon4, .accordeon5, .accordeon6
-      padding-bottom: 0
-      border-bottom: none
-      .custom-checkbox + label
-         color: rgb(96, 99, 103)
-         font-size: 17px
-         line-height: 130%
-         &:hover 
-            color: $green
-      .custom-checkbox + label::before
-         width: 25px
-         max-width: 25px
-         transition: 0s
-         height: 25px
-         box-sizing: border-box
-         border: 2px solid rgb(224, 229, 235)
-         border-radius: 6px
-         margin-right: 15px
-      .custom-checkbox:checked + label::before 
-         background: url(/img/check2.svg) no-repeat 50% 50%
-         background-color: $green
-         border: 2px solid $green
-         background-size: 15px
-      .custom-checkbox:checked + label
-         color: rgb(22, 23, 23)
-         font-weight: 500
-      .calc__item
-         margin-bottom: 12px
-         &:last-child
-            margin-bottom: 0
-   &__search 
-      width: 100%
-      height: 53px
-      margin-bottom: 20px
-      input 
-         width: 100%
-         height: 100%
-         border: 2px solid rgb(224, 229, 235)
-         font-size: 17px
-         padding-left: 20px
-         &:focus 
-            border: 2px solid $green
-   &__open, &__open2, &__open3, &__open4 
-      color: $green
-      font-size: 17px
-      font-weight: 500
-      line-height: 20px
-      margin-bottom: 20px
+      font-size: 16px
+      line-height: 1.69
+      color: #1c2126
+      .svg 
+         width: 20px
+         height: 20px
+         position: relative
+         top: 2px
+         margin-left: 3px
+         path 
+            stroke: #1c2126
       &:hover 
-         color: #000
-   .accordeon__button:after, .accordeon__button2:after, .accordeon__button3:after, .accordeon__button4:after, .accordeon__button5:after, .accordeon__button6:after
-      background: url(/img/acc.svg) no-repeat !important
-      width: 15px
-      height: 12px
-      transform: rotate(180deg)
-      -webkit-transform: rotate(180deg)
-   .accordeon__button.active:after, .accordeon__button2.active:after, .accordeon__button3.active:after, .accordeon__button4.active:after, .accordeon__button5.active:after, .accordeon__button6.active:after
-      transform: rotate(0deg)
-      -webkit-transform: rotate(0deg)
-   .panel__text, .panel__text2, .panel__text3, .panel__text4, .panel__text5, .panel__text6
-      margin-top: 0
-      transition: 0s !important
-   .accordeon__panel, .accordeon__panel2, .accordeon__panel3, .accordeon__panel4, .accordeon__panel5, .accordeon__panel6
-      transition: 0s !important
-   &__scroll
-      max-height: 210px
-      margin-right: 3px
-      overflow-y: auto
-      padding-bottom: 5px
-   .calc__item
-      img 
-         margin-right: 15px
-   &__box.area
+         color: $green
+         .svg 
+            path 
+               stroke: $green
+   &__box 
       display: flex
       justify-content: flex-start
-      flex-wrap: wrap
-      .catalog__sum
-         margin-bottom: 0
-         span 
-            display: flex
-            align-items: center
-            justify-content: center
-            background: $green 
-            position: absolute
-            top: -84px 
-            right: -91px
-            width: 103px
-            height: 44px
-            border-radius: 100px
-            color: white 
-            font-weight: 600
-            margin-left: 0
-            font-size: 28px
-            text-decoration: none
-      .catalog__per
-         margin-bottom: 15px
-      .catalog__item_horizontal .catalog__title
+      flex-wrap: wrap 
+      .hit__text
+         font-size: 16px
+         display: inherit
+         -webkit-line-clamp: inherit
+         br 
+            display: none
+      .hit__basket
+         flex: 1 0 auto 
+         max-width: 44px
+         background-color: #efefef
+         &:hover 
+            background: $green
+      .hit__btn
+         width: 145px
          margin-right: 0
-      .catalog__item_horizontal .catalog__projects
-         display: none
-      .catalog__item
-         width: 32.2%
-         padding: 0
-         margin-right: 20px
+         border: 1px solid $green
+      .hit__order
+         margin-top: 15px
+      .hit__item
+         border-radius: 1px
+         border: solid 1px #efefef
+         overflow: hidden
+         margin-bottom: 28px
+         margin-right: 15px
+         box-shadow: none
          height: auto
-         flex-direction: column
-         .main__area
-            flex-wrap: wrap 
-            div
-               margin-bottom: 10px
-         &:nth-child(2n)
-            background: white 
-         &:nth-child(3n)
+         width: 23.7%
+         transition: 0.5s
+         padding: 24px 9px 17px
+         &:nth-child(4n)
             margin-right: 0
          &:hover 
-            .catalog__left:after 
-               opacity: 1
-            .main__area, .main__button
-               opacity: 1
-      .catalog__left
-         margin-right: 0 !important
-         margin-left: 0 !important
-         margin-bottom: 20px
-         height: 394px
-         min-height: inherit
-         &:after 
-            content: ""
-            display: block  
-            width: 100%
-            height: 100%
-            border: 5px solid $green
-            position: absolute
-            opacity: 0
-            transition: 0.5s
-            top: 0   
+            border: solid 1px $green
+   &__area 
+      display: flex
+      align-items: flex-start
+      margin-bottom: 25.5px
+      ul 
+         li 
+            a 
+               font-size: 18px
+               font-weight: 600
+               line-height: 1.44
+               color: #9aa3b2
+               &:hover 
+                  color: $green
+      &:last-child
+         margin-bottom: 0
+   &__per 
+      margin-left: 13px
+   &__title 
+      font-size: 21px
+      font-weight: 600
+      color: #2e2e2e
+      margin-bottom: 10px
+      line-height: 130%
+      display: block
+      &:hover 
+         color: $green
+   &__name 
+      margin-bottom: 16px
+      font-size: 21.5px
+      font-weight: 600
+      color: #2e2e2e
+   &__data 
+      margin: 47px 0 
+      a 
+         font-size: 15.2px
+         margin-bottom: 5px
+         display: block
+         color: #6a994e
+         &:hover 
+            color: #000
+   &__goods 
+      display: flex
+      margin-bottom: 39px
+      .calc__item 
+         margin-right: 20px
+         p 
+            text-align: center
+            color: #1c2126
+            margin-top: 18px
+            font-size: 16px
+         .custom-checkbox + label::before 
+            display: none
+         .custom-checkbox + label
+            display: flex
             box-sizing: border-box
-            left: 0
-      .catalog__right .catalog__name, .catalog__links, .catalog__text p:nth-child(n+2)
-         display: none
-      .catalog__right
-         height: auto
-         flex-direction: column
-         min-height: initial
-      .catalog__item_horizontal .catalog__per
-         width: 100%
-         max-width: 72%
-         padding: 0
-      .catalog__information
-         width: 100%
-         max-width: 100%
-      .catalog__item_horizontal .catalog__per
-         position: relative
-         top: 0
-         left: 0
-         right: 0
-         margin-bottom: 15px
-      .catalog__title
-         font-size: 28px
-.switch  
-   position: relative 
-   display: block 
-   width: 44px 
-   height: 26px 
-.switch input   
-   opacity: 0 
-   width: 0 
-   height: 0 
-   &:focus 
-      border: none !important
+            align-items: center
+            justify-content: center
+            overflow: hidden
+            width: 144px
+            height: 146px
+            padding: 12px 30px
+            border: 1px solid #efefef
+            background-color: #fff
+            border-radius: 9px
+            img 
+               height: 123px
+               width: auto
+               object-fit: contain 
+               max-width: 100%
+         .custom-checkbox:checked + label
+            border: 1px solid $green
+   &__size 
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      p 
+         font-size: 14px
+         font-weight: 600
+         color: #2e2e2e
+         margin-right: 15px
+      .calc__item
+         margin-right: 15px
+         .custom-checkbox + label::before 
+            display: none
+         .custom-checkbox + label
+            display: flex
+            box-sizing: border-box
+            align-items: center
+            justify-content: center
+            width: 56px
+            height: 33px
+            border: 1px solid #efefef
+            background-color: #fff
+            color: #2e2e2e
+            font-size: 13px
+            border-radius: 4px
+         .custom-checkbox:checked + label
+            border: 1px solid $green
+            background: $green
+            color: white
+   &__all 
+      font-size: 14px
+      font-weight: 600
+      color: #bc4749
+      &:hover 
+         color: $green
+   &__view 
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0px 0 30px
+      height: 48px
+      border-radius: 3.4px
+      border: 1px solid #e9e9e9
+      background-color: #fff
+      font-size: 16px
+      line-height: 1.69
+      color: #a1a9b7
+      &:hover 
+         background: $green
+         border: 1px solid $green
+         color: white
+   &__left 
+      flex: 1 0 auto 
+      width: 100%
+      max-width: 301px
+      margin-right: 28px
 .slider  
    position: absolute 
    cursor: pointer 
@@ -1066,162 +930,8 @@ input:checked + .slider:before
    border-radius: 100px
 .slider.round:before  
    border-radius: 50% 
-.menu-btn3, .menu-btn4, .menu-btn5, .menu-btn6, .menu-btn7
+.menu-btn3
    display: none
-.main-card
-   .main__box:first-child
-      display: none
-.sliderr
-   max-width: 890px
-   width: 100%
-   margin-right: 30px
-   height: 529px
-   .slider__item
-      display: flex !important
-      width: 100%
-      height: 100%
-      align-items: center
-      justify-content: center
-      padding: 0 132px
-      img 
-         width: 100%
-         object-fit: contain
-         height: auto
-.slider-nav
-   max-width: 100%
-   margin-right: 0px
-   margin-top: 0px
-   width: 168px
-   position: relative 
-   .slick-slide 
-      margin: 0 0 20px
-      width: 100% 
-      height: 163px
-      box-sizing: border-box 
-      border: 2px solid rgb(242, 242, 242) 
-      display: flex
-      align-items: center
-      justify-content: center
-      flex: 1 0 auto 
-      max-width: 168px
-      padding: 20px
-      cursor: pointer
-      img 
-         width: 100%
-         object-fit: contain
-         height: auto
-   .slick-current
-      border: 2px solid #f1b306
-.item__slider 
-   display: flex
-.slick-prev:before, .slick-next:before 
-   display: none
-.slick-prev, .slick-next 
-   display: none !important
-.slider 
-   .slick-arrow
-      display: none !important
-.card 
-   &__one 
-      align-items: center
-      margin-bottom: 15px
-      width: max-content
-      p 
-         color: rgb(16, 25, 32)
-         font-size: 16px
-         font-weight: 500
-         line-height: 130%
-         margin-left: 20px
-         transition: 0.5s 
-      &:hover 
-         p 
-            color: $green
-   &__firm 
-      margin-top: 30px
-      color: rgb(84, 84, 84)
-      font-size: 16px
-      font-weight: 500
-      span 
-         margin-left: 15px
-         color: $green
-   &__btn 
-      margin-bottom: 20px
-   &__row 
-      margin-bottom: 30px
-   .custom-checkbox + label
-      flex-direction: column-reverse
-      align-items: center
-      margin-right: 20px
-   .custom-checkbox + label::before
-      margin-right: 0
-      margin-top: 10px
-      width: 27px
-      background: transparent
-      border: none
-      height: 3px
-   .custom-checkbox:checked + label::before
-      background: $green
-   &__see
-      margin-bottom: 30px
-      color: rgb(0, 119, 255)
-      font-size: 16px
-      font-weight: 600
-      display: block
-      width: max-content
-      line-height: 150%
-      &:hover 
-         color: $green
-   &__content 
-      align-items: center
-      margin-bottom: 5px
-   &__sum
-      color: rgb(16, 25, 32)
-      font-size: 30px
-      font-weight: 600
-      line-height: 140%
-      font-family: 'Proxima Nova Lt'
-      margin-right: 9px
-   &__proc 
-      color: $green
-      font-family: 'Proxima Nova Lt'
-      font-size: 30px
-      font-weight: 600
-      line-height: 140%
-      margin-right: 13px
-   &__sale
-      color: rgb(131, 131, 131)
-      font-size: 16px
-      font-family: 'Proxima Nova Lt'
-      font-weight: 400
-      text-decoration: line-through
-   &__box 
-      justify-content: space-between
-      align-items: flex-start
-   &__info 
-      width: 100%
-      max-width: 431px
-   &__top 
-      align-items: center
-      margin-bottom: 30px
-      span 
-         color: rgb(84, 84, 84)
-         font-size: 16px
-         font-weight: 500
-         line-height: 130%
-         margin-right: 15px
-      p 
-         color: rgb(0, 0, 0)
-         font-size: 16px
-         font-weight: 500
-         line-height: 130%
-         margin-right: 45px
-      a 
-         color: $green
-         font-size: 16px
-         font-weight: 500
-         line-height: 130%
-         &:hover 
-            color: #000
 .menu2 
    position: fixed
    top: 0
@@ -1658,6 +1368,53 @@ input:checked + .slider:before
          .svg 
             path 
                fill: white
+   &__colors 
+      display: flex
+      flex-wrap: wrap 
+      justify-content: flex-start
+      padding-top: 14px
+      border-top: 1px solid#efefef
+      justify-content: center
+      div 
+         display: flex
+         align-items: center
+         justify-content: center
+         border-radius: 50% 
+         width: 21px
+         height: 21px
+         margin-right: 5px
+         margin-bottom: 3px
+         &:nth-child(7n)
+            margin-right: 0
+      .color 
+         &_1 
+            background-color: #ded09f
+         &_2 
+            background-color: #ebdebc
+         &_3 
+            background-color: #5d2028
+         &_4 
+            background-color: #7e292c
+         &_5 
+            background-color: #154889
+         &_6 
+            background-color: #276234
+         &_7 
+            background-color: #0f4336
+         &_8 
+            background-color: #9fa0a2
+         &_9 
+            background-color: #474a51
+         &_10 
+            background-color: #44332c
+         &_11 
+            background-color: #dddfd4
+         &_12 
+            background-color: #f3f8f4
+         &_13 
+            background-color: #a6a8a7
+         &_14 
+            background-color: #f7f9ee
 .info 
    padding: 62px 0 55px
    &__top 
@@ -2118,3 +1875,536 @@ input:checked + .slider:before
    display: none
    &_1 
       display: block
+.calc 
+   margin-top: 50px
+   h2 
+      margin-bottom: 32px
+   &__wrap 
+      width: 100%
+      overflow: hidden
+      padding: 35px 55px 40px
+      background-color: #f7f9ee
+      border-radius: 6px
+   &__row 
+      display: flex
+      justify-content: flex-start
+      flex-wrap: wrap 
+      p 
+         font-size: 18.5px
+         font-weight: 600
+         color: #2e2e2e
+         margin-bottom: 15px
+      div 
+         margin-right: 23px
+         width: 31.3%
+         margin-bottom: 20px
+         &:nth-child(3n)
+            margin-right: 0
+      .selectCF
+         width: 100%
+         height: 39px
+         padding: 11px 0px
+         border-radius: 4px
+         border: solid 1px #c0c0c0
+         background-color: #f7f9ee
+      .selectCF .titleCF
+         font-size: 16.5px
+         width: 100% !important
+         color: #2e2e2e !important
+      .selectCF .arrowCF
+         background: url(/img/down.png) no-repeat !important
+         right: 6px
+         top: 5px
+      .onCF .arrowCF
+         right: 10px
+         top: -4px
+      .onCF li ul
+         background: white
+         border: 2px solid #e0e5eb
+         left: 0;
+         top: 36px
+         width: 100%
+         border-radius: 10px
+         padding: 10px 20px
+   .style1 
+      position: relative
+      z-index: 5
+   .style2
+      position: relative
+      z-index: 4
+   .style3
+      position: relative
+      z-index: 3
+   .style4
+      position: relative
+      z-index: 2
+   .style5
+      position: relative
+      z-index: 1
+   &__form 
+      margin-bottom: 26px
+      button 
+         width: 145px
+   &__info 
+      border-radius: 6px
+      width: 100%
+      overflow: hidden
+      padding: 27px 60px 21px 17px
+      border: solid 1px #c0c0c0
+      display: flex
+      align-items: flex-start
+      margin-bottom: 22px
+      justify-content: space-between
+   &__content 
+      display: flex
+      align-items: flex-start
+      p 
+         font-size: 17px
+         line-height: 1.41
+         color: #2e2e2e
+         margin-bottom: 2px
+         font-weight: 600
+         span 
+            font-weight: 400
+   &__left 
+      margin-right: 55px
+   &__title 
+      color: #2e2e2e
+      font-size: 17px
+      span 
+         color: #bc4749
+   &__sum 
+      font-size: 24px
+      font-weight: 600
+      line-height: 1.25
+      color: #2e2e2e
+   &__sub 
+      padding-left: 15px
+      font-size: 14px
+      line-height: 1.29
+      color: #9aa3b2
+      margin-bottom: 37px
+   &__block 
+      width: 100%
+      border-radius: 6px
+      overflow: hidden
+      border: solid 1px #c0c0c0
+      margin-bottom: 22px
+      padding: 34px 20px
+      .calc__sub
+         padding-left: 0
+         margin-bottom: 0
+         margin-top: 23px
+      label 
+         display: block
+         margin-bottom: 18px
+         font-size: 16px
+         font-weight: 600
+         line-height: 1.5
+         color: #2e2e2e
+      input 
+         padding-left: 11px
+         width: 350px
+         height: 43px
+         border-radius: 4px
+         border: 1px solid#c0c0c0
+         background-color: #f7f9ee
+         font-size: 16px
+         line-height: 1.5
+         color: #2e2e2e
+         &:focus 
+            border: 1px solid $green
+      button 
+         width: 242px
+         height: 45px
+      &_2 
+         .calc__per
+            width: 31.8%
+            input 
+               width: 100%
+         button 
+            width: 208px
+   &__flex 
+      align-items: flex-end
+   &__copy 
+      width: 234px
+      height: 45px
+      margin-bottom: 45px
+   h3 
+      margin-top: 0
+      margin-bottom: 22px
+      font-size: 23px
+      font-weight: 600
+      color: #2e2e2e
+      line-height: 130%
+   &__per 
+      margin-right: 13px
+   &-box 
+      margin-top: 50px
+      width: 100%
+      position: relative
+      padding: 30px 20px 27px
+      overflow: hidden
+      border-radius: 6px
+      background-color: rgb(77,154,71)
+      img 
+         position: absolute
+         left: 0
+         top: 30px
+      &__content 
+         padding-left: 338px
+         h3 
+            margin-top: 0
+            font-size: 30px
+            font-weight: 600
+            color: #fff
+            margin-bottom: 18px
+         p 
+            font-size: 19px
+            font-weight: 600
+            color: #fff
+            margin-bottom: 19px
+         form 
+            label 
+               display: block
+               font-size: 16px
+               font-weight: 600
+               line-height: 1.5
+               color: #fff
+               margin-bottom: 10px
+            input 
+               margin-bottom: 22px
+               width: 238px
+               height: 43px
+               padding-left: 14px
+               border-radius: 4px
+               border: 1px solid  #fff
+               background-color: transparent
+               color: white
+               font-size: 16px
+               &:focus 
+                  border: 1px solid #000
+            .custom-checkbox + label
+               display: flex
+               font-size: 14px
+               line-height: 1.71
+               color: #bbdea5
+               margin-bottom: 20px
+            .custom-checkbox + label::before
+               box-sizing: border-box
+               width: 20px
+               height: 21px
+               margin-right: 10px
+               background-color: #bc4749
+               border: none
+            .custom-checkbox:checked + label::before
+               background: url(/img/check.png) no-repeat center center
+               background-color: #bc4749
+            button 
+               width: 201px
+               height: 46px
+               border-radius: 1.2px
+               background-color: #2e2e2e
+               &:hover 
+                  background-color: #bc4749
+                  color: white
+.card 
+   &__top 
+      margin: 30px 0 45px
+      align-items: flex-start
+      justify-content: space-between
+   &__item 
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 50.5%
+      overflow: hidden
+      height: 486px
+      padding: 13px 30px 38px
+      border-radius: 5px
+      border: 1px solid #e9e9e9
+      img 
+         object-fit: contain 
+         width: 100%
+         max-height: 100%
+   &__content 
+      width: 47.7%
+      overflow: hidden
+      height: 486px
+      border-radius: 5px
+      border: 1px solid #e9e9e9
+      padding: 27px 30px
+   &__sum 
+      background-color: #f7f7f8
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      height: 79px
+      padding-left: 20px
+      overflow: hidden
+      border-radius: 8px
+      margin-bottom: 22px
+      p 
+         font-size: 27px
+         font-weight: 600
+         color: #2e2e2e
+         span 
+            font-size: 33px
+   .sum 
+      display: flex
+      align-items: center
+      margin-bottom: 17px
+      .up, .down 
+         display: flex
+         align-items: center
+         justify-content: center
+         width: 33px
+         cursor: pointer
+         height: 33px
+         overflow: hidden
+         border-radius: 1.2px
+         border: 1px solid  #e9e5e4
+         background-color: #fff
+         transition: 0.5s 
+         font-size: 19.5px
+         font-weight: 600
+         color: #2e2e2e
+         &:hover 
+            border: 1px solid $green
+      input 
+         text-align: center
+         width: 44px
+         height: 44px
+         border: 1px solid#e9e5e4
+         margin: 0 9px
+         background-color: #fff
+   &__total 
+      font-size: 17px
+      font-weight: 600
+      margin-bottom: 25px
+      color: #2e2e2e
+      span 
+         font-size: 23.5px
+   &__btn 
+      width: 366px
+      height: 45px
+      margin-bottom: 10px
+   &__buy 
+      width: 366px
+      height: 45px
+      background-color: #e9e5e4
+      color: #2e2e2e
+      border: 1px solid #e9e5e4
+      margin-bottom: 34px
+      &:hover 
+         background: #2e2e2e
+         color: white
+   &__delivery 
+      align-items: center
+      .svg 
+         width: 21px
+         margin-right: 12px
+         path 
+            fill: $green
+      p 
+         font-size: 17px
+         font-weight: 600
+         color: #2e2e2e
+         position: relative
+         top: -3px
+         border-bottom: 1px solid #2e2e2e
+         line-height: 100%
+   &__info 
+      .tabs__nav 
+         padding-bottom: 15px
+         margin-bottom: 27px
+         border-bottom: 1px solid #dfdfe1
+      .tabs__btn 
+         font-size: 21px
+         font-weight: 600
+         color: #5d5d64
+         padding: 0 15px
+         margin-right: 25px
+         &:last-child
+            margin-right: 0
+      .tabs__btn_active
+         color: #2e2e2e !important
+         position: relative
+         &:after 
+            content: ""
+            position: absolute
+            left: 0
+            bottom: -15px
+            background: $green
+            width: 100%
+            height: 1px
+   &__row 
+      justify-content: space-between
+      flex-wrap: wrap
+   &__el 
+      width: 49%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-bottom: 1px solid #dfdfe1
+      padding-bottom: 15px
+      margin-bottom: 15px
+      p
+         font-size: 15px
+         color: #9aa3b2
+      span 
+         font-size: 15px
+         color: #2e2e2e
+         min-width: 112px
+   &__list 
+      margin: 30px 0
+      li 
+         align-items: center
+         font-size: 18px
+         line-height: 1.61
+         color: #2e2e2e
+         margin-bottom: 10px
+         display: flex
+         &:before 
+            content: ""
+            display: flex 
+            align-items: center
+            justify-content: center
+            border-radius: 50% 
+            margin-right: 20px
+            width: 7px
+            height: 7px
+            background-color: #9aa3b2
+            margin-right: 15px
+            flex: 1 0 auto 
+            max-width: 7px
+   &__colors 
+      display: flex
+      flex-wrap: wrap 
+      justify-content: flex-start
+   &__color 
+      width: 120px
+      margin-bottom: 20px
+      margin-right: 10px
+      span 
+         width: 100%
+         display: flex
+         align-items: center
+         justify-content: center
+         overflow: hidden
+         margin-bottom: 10px
+         height: 45px
+         border-radius: 5px
+         font-size: 17.5px
+         color: #2e2e2e
+      p 
+         font-size: 14px
+         color: #a5adbb
+      &:nth-child(7n)
+         margin-right: 0
+      &_1
+         span 
+            background-color: #ded09f
+      &_2
+         span 
+            background-color: #ebdebc
+      &_3
+         span 
+            background-color: #5d2028
+            color: white
+      &_4
+         span 
+            background-color: #7e292c
+            color: white
+      &_5
+         span 
+            background-color: #154889
+            color: white
+      &_6
+         span 
+            background-color: #276234
+            color: white
+      &_7
+         span 
+            background-color: #0f4336
+            color: white
+      &_8
+         span 
+            background-color: #9fa0a2
+            color: white
+      &_9
+         span 
+            background-color: #474a51
+            color: white
+      &_10
+         span 
+            background-color: #44332c
+            color: white
+      &_11
+         span 
+            background-color: #dddfd4
+      &_12
+         span 
+            background-color: #f3f8f4
+      &_13
+         span 
+            background-color: #a6a8a7
+            color: white 
+   .calc
+      margin-top: 20px
+   .tabs2 
+      margin-top: 47px
+      .tabs__btn
+         font-size: 28px
+         font-weight: 600
+         margin-right: 25px
+         color: #9aa3b2
+         &:hover 
+            color: $green
+         &:last-child
+            margin-right: 0
+      .tabs__btn_active
+         color: #2e2e2e !important
+      .tabs__nav
+         margin-bottom: 25px
+      .hit__text
+         font-size: 16px
+         display: inherit
+         -webkit-line-clamp: inherit
+         br 
+            display: none
+      .hit__basket
+         flex: 1 0 auto 
+         max-width: 44px
+         background-color: #efefef
+         &:hover 
+            background: $green
+      .hit__btn
+         width: 145px
+         margin-right: 0
+         border: 1px solid $green
+      .hit__order
+         margin-top: 15px
+      .hit__item
+         border-radius: 1px
+         border: solid 1px #efefef
+         overflow: hidden
+         margin-bottom: 28px
+         margin-right: 15px
+         box-shadow: none
+         height: auto
+         width: 23.7%
+         transition: 0.5s
+         padding: 24px 9px 17px
+         &:nth-child(4n)
+            margin-right: 0
+         &:hover 
+            border: solid 1px $green
+         
+
+
+
+
+
+
+
